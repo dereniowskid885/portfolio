@@ -1,0 +1,33 @@
+.profile_picture{
+    background: url(/assets/img/cvvv.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.profile_tag{
+    background: #989898;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.profile_desc{
+    margin: 0;
+    color: lightslategray;
+}
+
+.profile_readmore{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.profile_readmore img{
+    transition: all .3s;
+    transform: translateX(0);
+}
+
+.profile_readmore:hover img{
+    transform: translateX(3px);
+}
