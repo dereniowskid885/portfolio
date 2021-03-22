@@ -16,6 +16,26 @@
     text-align: center;
 }
 
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(219, 199, 199);
+    background-color: transparent;
+    border: 4px solid #731c0a;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-style: oblique;
+    font-weight: 600;
+    letter-spacing: .1em;
+    transition: .4s ease background-color;
+    margin-left: 60px;
+}
+
+.cta:hover{
+    color: white;
+    background-color: #731c0a;
+}
+
 /* home */
 #home{
     background-image: url(/assets/img/home.jpg);
@@ -43,26 +63,6 @@
     font-size: 4em;
     color: rgb(219, 199, 199);
     position: relative;
-}
-
-#home .cta{
-    display: inline-block;
-    padding: 10px 30px;
-    color: rgb(219, 199, 199);
-    background-color: transparent;
-    border: 4px solid #731c0a;
-    border-radius: 10px;
-    font-size: 1.5em;
-    font-style: oblique;
-    font-weight: 600;
-    letter-spacing: .1em;
-    transition: .4s ease background-color;
-    margin-left: 60px;
-}
-
-#home .cta:hover{
-    color: white;
-    background-color: #731c0a;
 }
 
 .home_text{
@@ -215,6 +215,104 @@
 }
 /**/
 
+/* About me */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .about_right{
+    width: 100%;
+}
+
+#about .about_right h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .about_right p{
+    margin-bottom: 20px;
+}
+
+#about .about_right .cta{
+    color: black;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+#about .about_left .about_img{
+    margin-top: 40px;
+    position: relative;
+}
+
+#about .about_left .about_img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #731c0a;
+    z-index: -1;
+}
+/**/
+
+/* Contact */
+#contact .contact{
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contact .contact_bottom{
+    padding: 20px;
+}
+
+#contact .contact_top{
+    
+}
+
+#contact .contact_item{
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 6px 0 black;
+    flex-direction: column;
+    font-size: 1rem;
+    transition: 0.4s ease box-shadow;
+}
+
+#contact .contact_info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#contact .contact_img{
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+#contact .contact_info h1{
+    margin-bottom: 5px;
+}
+
+#contact .contact_item:hover{
+    box-shadow: 8px 8px 6px 0 #731c0a;
+}
+/**/
 
 /* Keyframes */
 @keyframes ani2{
