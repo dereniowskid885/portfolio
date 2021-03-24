@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
+    var menu = document.getElementById("menu_bar");
+    var scroll_last = 0;
+
+    window.addEventListener("scroll", function(){
+        var scroll_top = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scroll_top > scroll_last){
+            menu.style.top = "-10vh";
+        } else {
+            menu.style.top = "0";
+        }
+
+        scroll_last = scroll_top;
+    })
   }
 
 }

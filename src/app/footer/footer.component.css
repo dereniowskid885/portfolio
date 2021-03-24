@@ -1,0 +1,12 @@
+/* Footer */
+#footer {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 10px;
+}
+/**/
