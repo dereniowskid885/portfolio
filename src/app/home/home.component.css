@@ -1,3 +1,8 @@
+/* 
+======
+Global
+======
+*/
 .container{
     min-height: 100vh;
     width: 100%;
@@ -46,8 +51,16 @@
     color: white;
     background-color: #731c0a;
 }
+/* 
+======
+======
+*/
 
-/* home */
+/* 
+====
+Home
+====
+*/
 #home{
     background-image: url(/assets/img/home.jpg);
     background-size: cover;
@@ -82,9 +95,72 @@
     animation: ani2 3s ease-out forwards;
     opacity: 0;
 }
-/**/
+/* 
+======
+======
+*/
 
-/* Skills */
+/* 
+========
+About me
+========
+*/
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .about_img{
+    margin-top: 40px;
+    position: relative;
+}
+
+#about .about_img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid #731c0a;
+    z-index: -1;
+}
+
+#about .about_bottom{
+    width: 100%;
+}
+
+#about .about_bottom h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .about_bottom p{
+    margin-bottom: 20px;
+}
+
+#about .about_bottom .cta{
+    color: black;
+    margin-bottom: 50px;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* 
+======
+======
+*/
+
+/* 
+======
+Skills
+======
+*/
 #skills .skills{
     flex-direction: column;
     text-align: center;
@@ -154,9 +230,16 @@
     text-align: left;
     line-height: 2em;
 }
-/**/
+/* 
+======
+======
+*/
 
-/* Projects */
+/* 
+========
+Projects
+========
+*/
 #projects .projects{
     flex-direction: column;
     max-width: 1200px;
@@ -184,17 +267,6 @@
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-}
-
-#projects .projects_img{
-    flex-basis: 50%;
-    overflow: hidden;
-    display: list-item;
-}
-
-#projects .projects_img img{
-    margin: 5px;
-    opacity: .9;
 }
 
 #projects .projects_info{
@@ -225,58 +297,27 @@
 #projects .projects_info p{
     color: white;
 }
-/**/
 
-/* About me */
-#about .about{
-    flex-direction: column-reverse;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-    padding: 100px 20px;
+#projects .projects_img{
+    flex-basis: 50%;
+    overflow: hidden;
+    display: list-item;
 }
 
-#about .about_right{
-    width: 100%;
+#projects .projects_img img{
+    margin: 5px;
+    opacity: .9;
 }
+/* 
+======
+======
+*/
 
-#about .about_right h2{
-    font-size: 1.5em;
-    font-weight: 600;
-    letter-spacing: .2rem;
-    margin-bottom: 10px;
-}
-
-#about .about_right p{
-    margin-bottom: 20px;
-}
-
-#about .about_right .cta{
-    color: black;
-    margin-bottom: 50px;
-    font-size: 1rem;
-    margin: 0 auto;
-    padding: 10px 20px;
-}
-
-#about .about_left .about_img{
-    margin-top: 40px;
-    position: relative;
-}
-
-#about .about_left .about_img::after{
-    content: '';
-    position: absolute;
-    left: -33px;
-    top: 19px;
-    height: 98%;
-    width: 98%;
-    border: 7px solid #731c0a;
-    z-index: -1;
-}
-/**/
-
-/* Contact */
+/* 
+=======
+Contact
+=======
+*/
 #contact .contact{
     flex-direction: column;
     width: 80%;
@@ -302,10 +343,8 @@
     transition: 0.4s ease box-shadow;
 }
 
-#contact .contact_info h2{
-    font-size: 1.3rem;
-    line-height: 2rem;
-    font-weight: 500;
+#contact .contact_item:hover{
+    box-shadow: 8px 8px 6px 0 #731c0a;
 }
 
 #contact .contact_img{
@@ -317,12 +356,21 @@
     margin-bottom: 5px;
 }
 
-#contact .contact_item:hover{
-    box-shadow: 8px 8px 6px 0 #731c0a;
+#contact .contact_info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
 }
-/**/
+/* 
+======
+======
+*/
 
-/* Keyframes */
+/* 
+=========
+Keyframes
+=========
+*/
 @keyframes ani2{
     100%{
         opacity: 1;
@@ -334,3 +382,7 @@
         transform: scale(1.55);
     }
 }
+/* 
+======
+======
+*/
