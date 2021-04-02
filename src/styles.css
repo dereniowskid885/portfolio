@@ -2,50 +2,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html{
-    font-size: 15px;
+    font-size: 1rem;
     font-family: 'Biryani', sans-serif;
     scroll-behavior: smooth;
 }
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
-.name h1{
-    font-size: 2rem;
-    font-style: oblique;
-    color: white;
+p{
+    line-height: 1.8em;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
-/* Media For Tablet */
-@media only screen and (max-width: 768px){
-    #projects .project_bottom .project-item{
-        height: 400px;
-        margin: 0;
-        width: 100%;
-        border-radius: 0;
-    }
+img{
+    display: block;
+    max-width: 100%;
+}
 
-    #projects .projects_bottom .projects_img{
-        margin-top: 20px;
-        margin-left: 10%;
-    }
+/* CSS classes for fading animation written in js */
+.fade_in{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
 
-    #projects .projects_bottom .project_info {
-        height: 100%;
-    }
-
-    #projects .projects_bottom .project_info {
-        height: 100%;
-    }
-
-    #projects .projects_item{
-        width: 100%;
-        margin: 0;
-        border-radius: 0;
-    }
+.fade_in.appear{
+    opacity: 1;
 }
 /**/

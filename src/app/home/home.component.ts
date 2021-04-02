@@ -10,21 +10,28 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const sectionOne = document.querySelector(".section_title");
+    const faders = document.querySelectorAll(".fade_in");
 
-    const options = {
-      root: null,
+    const appear_options = {
       threshold: 0,
-      rootMargin: "-250px"
-    };
+      rootMargin: "0px 0px -400px 0px"
+     };
 
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const appear_on_scroll = new IntersectionObserver(function(entries, appear_on_scroll) {
       entries.forEach(entry => {
-        console.log(entry.target);
-      })
-    }, options);
+        if (!entry.isIntersecting) {
+          return;
+        } else {
+          entry.target.classList.add("appear");
+          appear_on_scroll.unobserve(entry.target);
+        }
 
-    observer.observe(sectionOne);
+      })
+    }, appear_options);
+
+    faders.forEach(fader => {
+      appear_on_scroll.observe(fader);
+    })
 
   }
 }

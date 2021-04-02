@@ -1,12 +1,24 @@
-/* Footer */
 #footer {
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    background: #434343;
+    display: none;
 }
 
 #footer .footer{
-    min-height: 200px;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 10px;
+    width: 100%;
+    min-height: 3em;
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+    align-items: center;
 }
-/**/
+
+#footer .footer h1{
+    color: white;
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 0.1em;
+}
+
+#footer .footer h2{
+    color: white;
+}
