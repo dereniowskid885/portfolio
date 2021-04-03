@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   faPhoneSquareAlt = faPhoneSquareAlt;
 
   ngOnInit(): void {
+    // Header appear on scroll
     var menu = document.getElementById("header_animation");
     var scroll_last = 1;
 
@@ -31,6 +32,23 @@ export class HeaderComponent implements OnInit {
         }
 
         scroll_last = scroll_top;
+    })
+
+    // Mobile menu icon animation
+    var icon = document.querySelector(".mobile_menu_icon");
+    var mobile_menu = document.querySelector(".mobile_menu");
+    var mobile_menu_items = document.querySelectorAll(".mobile_menu_items li a");
+
+    icon.addEventListener("click", () => {
+      icon.classList.toggle("active");
+      mobile_menu.classList.toggle("active");
+    })
+
+    mobile_menu_items.forEach(item => {
+      item.addEventListener("click", () => {
+        icon.classList.remove("active");
+        mobile_menu.classList.remove("active");
+      })
     })
   }
 }
