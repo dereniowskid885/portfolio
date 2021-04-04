@@ -30,7 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "/assets/js/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"
+              "src/assets/js/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"
             ]
           },
           "configurations": {
