@@ -4,7 +4,7 @@ Global
 ======
 */
 .container{
-    margin-inline: auto;
+    margin: 0 auto;
     min-height: 120vh;
     width: 100%;
     display: flex;
@@ -18,7 +18,7 @@ section{
 }
 
 .section_title{
-    font-size: 4rem;
+    font-size: calc(2rem + 2vw);
     color: black;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -41,6 +41,8 @@ Home
     background-image: url(/assets/img/home.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     position: relative;
     z-index: 1;
 }
@@ -53,16 +55,22 @@ Home
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.7;
     z-index: -1;
 }
 
+#home .home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    bottom: 50%;
+}
+
 #home h1{
-    font-size: 5rem;
+    font-size: calc(2.5rem + 3vw);
     color: white;
     text-align: center;
-    position: absolute;
-    top: 30%;
     opacity: 0;
     animation: ani2 4s ease-out forwards;
     font-style: italic;
@@ -70,25 +78,44 @@ Home
 }
 
 #home .home_text{
-    top: 40%;
     position: absolute;
+    top: 30%;
+    flex-direction: column;
+    display: flex;
     overflow: hidden;
     animation: ani2 4s ease-in forwards;
     opacity: 0;
-    padding-top: 0.5em;
-    border-top: 2px solid white;
+    padding: 2em;
 }
 
 #home .home_text p{
+    text-align: center;
     color: white;
-    font-size: 2rem;
-    font-style: italic;
+    font-size: calc(1rem + 1.2vw);
+}
+
+#home .home_text a{
+    color: white;
+    border: 2px solid white;
+    font-size: calc(0.6rem + 0.3vw);
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    border-radius: 2em;
+    transition: 0.5s;
+}
+
+#home .home_text a:hover{
+    background-color: rgb(175, 60, 60);
+    letter-spacing: 0.1em;
 }
 
 #home .home_text p span{
-    color: #581010;
-    font-size: 2.5rem;
-    font-weight: 900;
+    color: rgb(175, 60, 60);
+    text-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.5);
+    font-size: calc(1rem + 1.2vw);
+    font-weight: bold;
+
 }
 /* 
 ======
@@ -137,12 +164,22 @@ About me
     text-align: center;
 }
 
+#about .about_info p{
+    font-size: calc(0.6rem + 0.8vw);
+}
+
 #about .about_img h2{
-    font-size: 2rem;
+    margin-top: 1em;
+    font-size: calc(0.9rem + 0.8vw);
     font-weight: 900;
     letter-spacing: 0.1rem;
     text-align: center;
     color: white;
+}
+
+#about .about_img h3{
+    font-size: calc(0.7rem + 0.8vw);
+    margin-bottom: 1em;
 }
 /* 
 ======
@@ -179,7 +216,7 @@ Skills
 }
 
 #skills .skills_item h2{
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.8vw);
     color: black;
     margin: 0.3em 0 0.3em 0;
 }
@@ -220,24 +257,24 @@ Projects
 }
 
 #projects .projects_item span{
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: calc(0.8rem + 0.8vw);
 }
 
 #projects .projects_item h1{
-    font-size: 3.5rem;
+    font-size: calc(1.3rem + 2vw);
     font-weight: 600;
     color: white;
     text-align: center;
 }
 
 #projects .projects_item h2{
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: calc(0.7rem + 0.7vw);
+    font-weight: 700;
 }
 
 #projects .projects_item p{
     margin: 1em 0 0 0;
+    font-size: calc(0.8rem + 0.4vw);
 }
 
 #projects .projects_img{
@@ -261,9 +298,10 @@ Contact
 */
 #contact .contact{
     display: flex;
+    flex-direction: row;
     text-align: center;
     min-height: 2em;
-    max-width: 60%;
+    max-width: fit-content;
     box-shadow:
         0 0px 6.3px -7px rgba(0, 0, 0, 0.065),
         0 0px 21px -7px rgba(0, 0, 0, 0.095),
@@ -278,11 +316,12 @@ Contact
 }
 
 #contact .contact_item h1{
-    font-size: 1.5rem;
+    font-size: calc(0.7rem + 0.8vw);
 }
 
 #contact .contact_item h2{
     font-weight: 100;
+    font-size: calc(0.5rem + 0.8vw);
 }
 
 #contact .contact_img{
@@ -299,26 +338,6 @@ Responsive
 ==========
 */
 @media only screen and (max-width: 1200px){
-    .section_title{
-        font-size: 3rem;
-    }
-
-    #home h1{
-        font-size: 3rem;
-    }
-
-    #home .home_text{
-        padding-top: 0.3em;
-        top: 36%;
-    }
-
-    #home .home_text p{
-        font-size: 1.2rem;
-    }
-
-    #home .home_text p span{
-        font-size: 1.5rem;
-    }
 
     .container{
         flex-direction: column;
@@ -327,31 +346,16 @@ Responsive
     #about .about,
     #projects .projects,
     #contact .contact{
-        max-width: 90%;
+        max-width: fit-content;
     }
 
     #about .about_img{
         width: 100%;
     }
 
-    #about .about_img h2{
-        font-size: 1.5rem;
-        margin-top: 1em;
-    }
-
-    #about .about_img h3{
-        font-size: 1rem;
-        margin-bottom: 1em;
-    }
-
     #about .about_info{
         width: 100%;
-        padding: 0.2em;
-        font-size: 0.1rem;
-    }
-
-    #skills .skills_item h2{
-        font-size: 1.2rem;
+        padding: 0;
     }
 
     #skills .skills{
@@ -364,35 +368,9 @@ Responsive
         padding: 1em;
     }
 
-    #projects .projects_item h1{
-        font-size: 2rem;
-    }
-
-    #projects .projects_item h2{
-        font-size: 1.2rem;
-    }
-
-    #projects .projects_item span{
-        font-size: 1.4rem;
-    }
-
-    #projects .projects_item p{
-        font-size: 1rem;
-    }
-
     #contact .contact{
         flex-direction: column;
     }
-
-    #contact .contact_item h1{
-        font-size: 1.2rem;
-    }
-    
-    #contact .contact_item h2{
-        font-weight: 100;
-        font-size: 0.9rem;
-    }
-
 }
 /*
 ======

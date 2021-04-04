@@ -4,7 +4,7 @@
     position: fixed;
     width: 100%;
     z-index: 2;
-    opacity: 0.2;
+    opacity: 0.3;
     display: flex;
     transition: opacity 1s ease-in-out;
 }
