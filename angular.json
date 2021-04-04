@@ -30,7 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              
+              "lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"
             ]
           },
           "configurations": {

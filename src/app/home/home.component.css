@@ -79,7 +79,7 @@ Home
 
 #home .home_text{
     position: absolute;
-    top: 30%;
+    top: 25%;
     flex-direction: column;
     display: flex;
     overflow: hidden;
@@ -94,28 +94,48 @@ Home
     font-size: calc(1rem + 1.2vw);
 }
 
-#home .home_text a{
-    color: white;
-    border: 2px solid white;
-    font-size: calc(0.6rem + 0.3vw);
-    padding: 1em;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    border-radius: 2em;
-    transition: 0.5s;
-}
-
-#home .home_text a:hover{
-    background-color: rgb(175, 60, 60);
-    letter-spacing: 0.1em;
-}
-
 #home .home_text p span{
     color: rgb(175, 60, 60);
     text-shadow: 0 0.1em 0 rgba(0, 0, 0, 0.5);
     font-size: calc(1rem + 1.2vw);
     font-weight: bold;
 
+}
+
+#home .home_text .read_more_button{
+    color: white;
+    border: 2px solid white;
+    font-size: calc(0.5rem + 0.3vw);
+    padding: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: 0.5s;
+    margin-inline: auto;
+}
+
+#home .home_text .read_more_button:hover{
+    background-color: rgb(175, 60, 60);
+    letter-spacing: 0.1em;
+}
+
+#home .home_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#home .home_links fa-icon{
+    font-size: calc(1em + 1vw);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+#home .home_links fa-icon:hover{
+    color: rgb(175, 60, 60);
+    opacity: 1;
 }
 /* 
 ======
@@ -243,7 +263,7 @@ Projects
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 4em;
+    margin-bottom: 6em;
     width: 100%;
     padding: 2.5em;
     box-shadow:
@@ -280,11 +300,21 @@ Projects
 #projects .projects_img{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #projects .projects_img img{
     margin-top: 1.5em;
+    transition: 1s;
+    height: calc(20vh+ 10vh);
+    width: calc(20vw + 5vw);
+    padding: 0.2em;
+}
+
+#projects .projects_img img:hover{
+    filter: drop-shadow(4px 4px 6px gray);
+    transform: scale(1.1);
 }
 /* 
 ======
@@ -321,7 +351,7 @@ Contact
 
 #contact .contact_item h2{
     font-weight: 100;
-    font-size: calc(0.5rem + 0.8vw);
+    font-size: calc(0.6rem + 0.5vw);
 }
 
 #contact .contact_img{
