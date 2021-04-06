@@ -31,7 +31,7 @@
 #header .menu .menu_items{
     list-style: none;
     display: flex;
-    margin: 0;
+    margin-top: 0.5em;
     padding: 0;
     width: 60%;
     align-items: center;
@@ -86,7 +86,7 @@
 
 #header fa-icon{
     opacity: 0.8;
-    font-size: 1.8em;
+    font-size: 1.8rem;
 }
 
 #header li:hover fa-icon{
@@ -95,7 +95,8 @@
     transition: 0.5s;
 }
 
-#header .mobile_menu{
+#header .mobile_menu,
+#header .mobile_arrow{
     display: none;
 }
 
@@ -152,8 +153,8 @@ Responsive menu
         right: 0;
         position: fixed;
         background-color: black;
-        height: 60px;
-        width: 60px;
+        height: 45px;
+        width: 45px;
         border: 3px solid rgb(219, 199, 199);
         border-radius: 50%;
         margin: 1em;
@@ -175,7 +176,7 @@ Responsive menu
 
     #header .mobile_menu .mobile_menu_icon .bar{
         height: 2px;
-        width: 30px;
+        width: 20px;
         background-color: rgb(219, 199, 199);
     }
 
@@ -191,26 +192,62 @@ Responsive menu
 
     #header .mobile_menu .mobile_menu_icon .bar::after{
         height: 2px;
-        width: 30px;
-        top: 35px;
+        width: 20px;
+        top: 32px;
         position: fixed;
     }
 
     #header .mobile_menu .mobile_menu_icon .bar::before{
         height: 2px;
-        width: 30px;
-        top: 55px;
+        width: 20px;
+        top: 44px;
         position: fixed;
     }
 
     #header .mobile_menu .mobile_menu_icon.active .bar::after{
-        top: 45px;
+        top: 37px;
     }
 
     #header .mobile_menu .mobile_menu_icon.active .bar::before{
-        top: 45px;
+        top: 37px;
     }
 
+    #header .mobile_arrow{
+        display: flex;
+    }
+
+    #header .mobile_arrow a{
+        color: rgb(219, 199, 199);
+        right: 0;
+        bottom: 0;
+        display: flex;
+        position: fixed;
+        background-color: black;
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        border: 3px solid rgb(219, 199, 199);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin: 1em;
+        z-index: 2;
+    }
+
+    #header .mobile_arrow a:after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 3px solid rgb(219, 199, 199);
+        animation: mobile_menu_icon_ani 3s ease infinite;
+    }
+
+    #header .mobile_arrow fa-icon{
+        font-size: 1.3rem;
+        padding-top: 0.2em;
+    }
 }
 /* 
 ======

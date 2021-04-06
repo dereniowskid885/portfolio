@@ -1,6 +1,5 @@
 #footer {
     background: #434343;
-    display: none;
 }
 
 #footer .footer{
@@ -8,17 +7,55 @@
     min-height: 3em;
     display: flex;
     padding: 1em;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
-#footer .footer h1{
-    color: white;
-    font-size: 2em;
-    font-style: italic;
+#footer .menu_items{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
-#footer .footer h2{
+#footer .menu_items a{
+    color: rgb(219, 199, 199);
+}
+
+#footer fa-icon{
+    opacity: 0.8;
+    font-size: calc(0.8rem + 1.2vw);
+}
+
+#footer li:hover fa-icon{
     color: white;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#footer hr{
+    width: 50%;
+    background-color: black;
+    margin-bottom: 0.5em;
+}
+
+#footer .footer h1{
+    color: rgb(219, 199, 199);
+    font-size: calc(0.6rem + 1.2vw);
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0.2em black;
+    letter-spacing: 0.2em;
+}
+
+#footer .footer h2{
+    font-size: calc(0.6rem + 0.8vw);
+    color: rgb(219, 199, 199);
+    font-weight: 100;
+    text-shadow: 3px 3px 0.2em black;
 }

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { faHome, faAddressCard, faLaptopCode,  faCode, faPhoneSquareAlt} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faAddressCard, faLaptopCode,  faCode, faPhoneSquareAlt, faChevronUp} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   faLaptopCode = faLaptopCode;
   faCode = faCode;
   faPhoneSquareAlt = faPhoneSquareAlt;
+  faChevronUp = faChevronUp;
 
   ngOnInit(): void {
     // Header appear on scroll
@@ -36,12 +37,18 @@ export class HeaderComponent implements OnInit {
 
     // Mobile menu icon animation
     var icon = document.querySelector(".mobile_menu_icon");
+    var arrow = document.querySelector(".mobile_arrow");
     var mobile_menu = document.querySelector(".mobile_menu");
     var mobile_menu_items = document.querySelectorAll(".mobile_menu_items li a");
 
     icon.addEventListener("click", () => {
       icon.classList.toggle("active");
       mobile_menu.classList.toggle("active");
+    })
+
+    arrow.addEventListener("click", () => {
+      icon.classList.remove("active");
+      mobile_menu.classList.remove("active");
     })
 
     mobile_menu_items.forEach(item => {
