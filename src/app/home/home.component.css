@@ -112,7 +112,7 @@ Home
     font-weight: bold;
     border-radius: 2em;
     transition: 0.5s;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 #home .home_text .read_more_button:hover{
