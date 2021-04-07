@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   faFacebook = faFacebook;
 
   ngOnInit(): void {
+    // sections appear animation Intersection Observer
     const faders = document.querySelectorAll(".fade_in");
 
     const appear_options = {

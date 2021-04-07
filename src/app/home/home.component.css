@@ -5,7 +5,7 @@ Global
 */
 .container{
     margin: 0 auto;
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -26,7 +26,6 @@ section{
     font-weight: 600;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
 }
-
 /* 
 ======
 ======
@@ -293,8 +292,23 @@ Projects
 }
 
 #projects .projects_item p{
-    margin: 1em 0 0 0;
     font-size: calc(0.8rem + 0.4vw);
+}
+
+#projects .projects_info a{
+    color: white;
+    transition: 0.5s;
+    opacity: 0.5;
+    margin-right: 0.5em;
+}
+
+#projects .projects_info a:hover{
+    color: black;
+    opacity: 1;
+}
+
+#projects .projects_info fa-icon{
+    font-size: calc(1em + 1vw);
 }
 
 #projects .projects_img{
@@ -350,7 +364,7 @@ Contact
 }
 
 #contact .contact_item h2{
-    font-weight: 100;
+    font-weight: 400;
     font-size: calc(0.6rem + 0.5vw);
 }
 

@@ -41,32 +41,32 @@
     <h1 class="section_title">My skills</h1>
     <div class="skills container">
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/html.jpg"/></div>
+            <div class="icon"><img src="/assets/img/html.jpg" alt="html icon"/></div>
             <h2>HTML</h2>
             <p>Good</p>
         </div>
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/css.jpg"/></div>
+            <div class="icon"><img src="/assets/img/css.jpg" alt="css icon"/></div>
             <h2>CSS</h2>
             <p>Good</p>
         </div>
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/js.jpg"/></div>
+            <div class="icon"><img src="/assets/img/js.jpg" alt="javascript icon"/></div>
             <h2>JavaScript</h2>
             <p>Basic</p>
         </div>
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/nodejs.jpg"/></div>
+            <div class="icon"><img src="/assets/img/nodejs.jpg" alt="node.js icon"/></div>
             <h2>Node.js</h2>
             <p>Basic</p>
         </div>
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/sql.jpg"/></div>
+            <div class="icon"><img src="/assets/img/sql.jpg" alt="sql icon"/></div>
             <h2>SQL</h2>
             <p>Good</p>
         </div>
         <div class="skills_item">
-            <div class="icon"><img src="/assets/img/git.jpg"/></div>
+            <div class="icon"><img src="/assets/img/git.jpg" alt="git icon"/></div>
             <h2>Git</h2>
             <p>Basic</p>
         </div>
@@ -78,13 +78,19 @@
     <h1 class="section_title">My Projects</h1>
     <div class="projects container">
         <div class="projects_item">
-            <h1>Basketballerz</h1>
-            <h2><span>Front-end:</span> HTML/CSS/JavaScript/little bit of jQuery</h2>
-            <h2><span>Back-end:</span> Node.js (RESTful API)</h2>
-            <h2><span>Database:</span> local MySQL Database</h2>
-            <p>
-                Non-commercial browser game, that is still being developed. At this point user registration, and login works fine. Currently I am working on json web tokens and session authentication. 
-            </p>
+            <div class="projects_info">
+                <h1>Basketballerz</h1>
+                <h2><span>Front-end:</span> HTML/CSS/JavaScript/little bit of jQuery</h2>
+                <h2><span>Back-end:</span> Node.js (RESTful API)</h2>
+                <h2><span>Database:</span> local MySQL Database</h2>
+                <a href="https://github.com/dereniowskid885/Basketballerz" target="_blank">
+                <fa-icon [icon]="faGithub"></fa-icon></a>
+                <a href="https://github.com/dereniowskid885/Basketballerz_api" target="_blank">
+                <fa-icon [icon]="faGithub"></fa-icon></a>
+                <p>
+                    Non-commercial browser game, that is still being developed. At this point user registration, and login works fine. Currently I am working on json web tokens and session authentication. 
+                </p>
+            </div>
             <div class="projects_img">
                 <a href="/assets/img/basketballerz_1.jpg" data-lightbox="mygallery">
                 <img src="/assets/img/basketballerz_1.jpg" alt="basketballerz project photo" /></a>
@@ -100,6 +106,8 @@
             <div class="projects_info">
                 <h1>KcalCulator</h1>
                 <h2>C++/Qt</h2>
+                <a href="https://github.com/dereniowskid885/kcalculator" target="_blank">
+                <fa-icon [icon]="faGithub"></fa-icon></a>
                 <p>
                     Desktop application for Windows written for student project. App calculates caloric demand depending on data from profile. User can track his calories intake in meal diary. Current calories and macronutrients are updated in real-time. Every data is saved in .txt files.
                 </p>
@@ -154,12 +162,12 @@
         <h1 class="section_title">Contact</h1>
         <div class="contact container">
             <div class="contact_item">
-                <div class="contact_img"><img src="/assets/img/linkedin.jpg"/></div>
+                <div class="contact_img"><img src="/assets/img/linkedin.jpg" alt="linkedin icon"/></div>
                 <h1>LinkedIn</h1>
                 <h2>linkedin.com/in/daniel-dereniowski-8460b120b</h2>
             </div>
             <div class="contact_item">
-                <div class="contact_img"><img src="/assets/img/email.jpg"/></div>
+                <div class="contact_img"><img src="/assets/img/email.jpg" alt="e-mail icon"/></div>
                 <h1>E-mail</h1>
                 <h2>dereniowskid885@gmail.com</h2>
             </div>
