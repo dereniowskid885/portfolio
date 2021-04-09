@@ -50,7 +50,7 @@
     top: 60%;
     left: 80%;
     transform: translate(-50%, -50%) scale(0);
-    font-size: calc(1.2rem + 1vw);
+    font-size: calc(0.4rem + 2vw);
     letter-spacing: 0.8em;
     z-index: -1;
     transition: .6s ease-out letter-spacing;
@@ -69,7 +69,7 @@
     top: 60%;
     left: 80%;
     transform: translate(-50%, -50%) scale(1);
-    font-size: calc(1.2rem + 1vw);
+    font-size: calc(0.4rem + 2vw);
     letter-spacing: 0.8em;
     z-index: -1;
     visibility: hidden;
