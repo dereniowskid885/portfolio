@@ -1,3 +1,5 @@
+import { File } from 'sanity';
+
 interface SanityBody {
     _createdAt: string;
     _id: string;
@@ -11,4 +13,11 @@ interface Image {
         _ref: string;
         _type: 'reference';
     };
+}
+
+export interface HeroData extends SanityBody {
+    _type: 'hero';
+    profilePicture: Image;
+    name: string;
+    cv: File;
 }
