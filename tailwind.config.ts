@@ -7,7 +7,16 @@ const config: Config = {
         './app/**/*.{js,ts,jsx,tsx,mdx}'
     ],
     theme: {
-        extend: {}
+        extend: {
+            backgroundImage: {
+                hero: "url('../assets/bg-home.jpg')"
+            },
+            colors: {
+                'primary-green': 'var(--primary-green)',
+                'primary-red': 'var(--primary-red)',
+                'primary-blue': 'var(--primary-blue)'
+            }
+        }
     },
     plugins: [require('tailwind-scrollbar')]
 };

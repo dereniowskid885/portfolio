@@ -1,13 +1,35 @@
-import { Inter } from 'next/font/google';
+import { Rubik } from 'next/font/google';
+import Header from '@components/Header';
+import Hero from '@components/Hero';
+import { HeroData } from '@/typings';
+import { GetStaticProps } from 'next';
+import { fetchHeroData } from '@utils/fetchHero';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Rubik({ weight: '400', subsets: ['latin'] });
 
-export default function Home() {
+type Props = {
+    heroData: HeroData;
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+    const heroData = await fetchHeroData();
+
+    return {
+        props: {
+            heroData
+        },
+        revalidate: 10
+    };
+};
+
+export default function Home({ heroData }: Props) {
     return (
         <main
-            className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
+            className={`flex h-screen flex-col items-center justify-between bg-hero bg-fixed bg-center bg-cover bg-no-repeat
+            text-white ${inter.className}`}
         >
-            Home
+            <Header />
+            <Hero data={heroData} />
         </main>
     );
 }

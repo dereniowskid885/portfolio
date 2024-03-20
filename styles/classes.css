@@ -1,0 +1,47 @@
+@import 'tailwindcss/components';
+
+@layer components {
+    .btn {
+        @apply flex items-center justify-center gap-2 rounded-lg bg-slate-300 px-6 py-4 text-xl font-bold text-black;
+    }
+
+    .btn--download:hover .download-arrow {
+        transform: translate(0, 3px);
+    }
+
+    .download-arrow {
+        transition: transform 0.2s linear;
+    }
+
+    .anim-border {
+        --offset: 3px;
+        position: relative;
+        overflow: hidden;
+        background: #000;
+        height: 90px;
+        width: 250px;
+        z-index: 0;
+    }
+
+    .anim-border::before {
+        content: '';
+        background: conic-gradient(transparent 270deg, white, transparent);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 1;
+        width: 100%;
+        animation: rotate 6s linear infinite;
+    }
+
+    .anim-border::after {
+        content: '';
+        background: inherit;
+        border-radius: inherit;
+        position: absolute;
+        inset: var(--offset);
+        height: calc(100% - 2 * var(--offset));
+        width: calc(100% - 2 * var(--offset));
+    }
+}
