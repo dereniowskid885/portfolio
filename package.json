@@ -10,6 +10,7 @@
     },
     "dependencies": {
         "@portabletext/react": "^3.0.12",
+        "@sanity/client": "^6.15.5",
         "@sanity/image-url": "^1.0.2",
         "@sanity/vision": "^3.34.0",
         "framer-motion": "^11.0.14",
